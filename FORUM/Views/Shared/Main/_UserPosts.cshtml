@@ -1,0 +1,38 @@
+﻿@using FORUM.ViewClass
+@model MainViewModel
+@foreach (var post in Model.Posts)
+{
+    <div class="ui raised very padded segment" style="max-width: 700px; margin: 20px auto;">
+        <div class="ui items">
+            <div class="item">
+                @if (!string.IsNullOrEmpty(post.filepath))
+                {
+                    <div class="image" style="max-width: 250px;">
+                        <img src="@post.filepath" alt="Изображение поста" class="ui rounded image" />
+                    </div>
+                }
+
+                <div class="content" style="flex: 1;">
+                    <a class="header" style="font-size: 1.5em;">@post.title</a>
+                    <div class="meta" style="margin-top: 5px;">
+                        <span class="date">
+                            <i class="calendar icon"></i> @post.dateTime.ToString("dd.MM.yyyy HH:mm")
+                        </span>
+                    </div>
+                    <div class="description" style="margin-top: 10px;">
+                        <p>@post.content</p>
+                    </div>
+                    <div class="extra" style="margin-top: 10px;">
+                        <button class="ui teal button">
+                            <i class="thumbs up icon"></i> Нравится
+                        </button>
+                        <button class="ui basic button">
+                            <i class="comment icon"></i> Комментарии
+                        </button>
+                        <partial name="Main/_DeletePost" model="(post.id, Model.User.Id)" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

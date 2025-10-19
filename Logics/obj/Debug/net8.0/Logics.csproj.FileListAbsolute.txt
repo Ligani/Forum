@@ -1,0 +1,17 @@
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\bin\Debug\net8.0\Logics.deps.json
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\bin\Debug\net8.0\Logics.dll
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\bin\Debug\net8.0\Logics.pdb
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\bin\Debug\net8.0\DataAccess.dll
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\bin\Debug\net8.0\DomainModels.dll
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\bin\Debug\net8.0\DomainModels.pdb
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\Logics.csproj.AssemblyReference.cache
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\Logics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\Logics.AssemblyInfoInputs.cache
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\Logics.AssemblyInfo.cs
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\Logics.csproj.CoreCompileInputs.cache
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\Logics.csproj.Up2Date
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\Logics.dll
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\refint\Logics.dll
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\Logics.pdb
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\ref\Logics.dll

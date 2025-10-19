@@ -1,0 +1,7 @@
+﻿@using FORUM.Contracts
+@model IEnumerable<UserResponse>
+
+@foreach (var user in Model)
+{
+    <div>@user.Id - @user.Name</div>
+}

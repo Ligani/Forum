@@ -1,0 +1,17 @@
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\bin\Debug\net8.0\DataAccess.dll
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\bin\Debug\net8.0\DomainModels.dll
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\bin\Debug\net8.0\DomainModels.pdb
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\obj\Debug\net8.0\DataAccess.csproj.Up2Date
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\obj\Debug\net8.0\DataAccess.dll
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll

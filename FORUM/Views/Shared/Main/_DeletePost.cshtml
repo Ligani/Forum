@@ -1,0 +1,6 @@
+﻿@model (Guid id_post,Guid id_user);
+<form asp-controller="Main" asp-action="DeletePost">
+    <input type="hidden" name="id_post" value="@Model.id_post" />
+    <input type="hidden" name="id_user" value="@Model.id_user" />
+    <input type="submit" value="Удалить пост"class="ui basic button">
+</form>

@@ -1,0 +1,35 @@
+﻿<div class="ui container" style="max-width: 600px; margin-top: 40px;">
+    <h2 class="ui teal header">
+        <i class="edit icon"></i>
+        <div class="content">Создать новый пост</div>
+    </h2>
+
+    <form asp-action="NewPost" asp-controller="Main" method="post" enctype="multipart/form-data" class="ui form segment">
+        <div class="field">
+            <label>Заголовок</label>
+            <input type="text" name="title" placeholder="Введите заголовок поста" required />
+        </div>
+
+        <div class="field">
+            <label>Содержимое</label>
+            <textarea name="content" placeholder="Введите текст поста..." rows="5" required></textarea>
+        </div>
+
+        <div class="field">
+            <label>Изображение (необязательно)</label>
+            <input type="file" name="file" accept="image/*" />
+        </div>
+
+        <button type="submit" class="ui teal fluid button">
+            <i class="send icon"></i> Опубликовать
+        </button>
+
+        @if (!string.IsNullOrEmpty(ViewBag.PostError as string))
+        {
+            <div class="ui negative message" style="margin-top: 15px;">
+                <i class="exclamation triangle icon"></i>
+                @ViewBag.PostError
+            </div>
+        }
+    </form>
+</div>

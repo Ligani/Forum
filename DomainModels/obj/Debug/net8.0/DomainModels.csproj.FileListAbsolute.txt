@@ -1,0 +1,11 @@
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DomainModels\bin\Debug\net8.0\DomainModels.deps.json
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DomainModels\bin\Debug\net8.0\DomainModels.dll
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DomainModels\bin\Debug\net8.0\DomainModels.pdb
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DomainModels\obj\Debug\net8.0\DomainModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DomainModels\obj\Debug\net8.0\DomainModels.AssemblyInfoInputs.cache
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DomainModels\obj\Debug\net8.0\DomainModels.AssemblyInfo.cs
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DomainModels\obj\Debug\net8.0\DomainModels.csproj.CoreCompileInputs.cache
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DomainModels\obj\Debug\net8.0\DomainModels.dll
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DomainModels\obj\Debug\net8.0\refint\DomainModels.dll
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DomainModels\obj\Debug\net8.0\DomainModels.pdb
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\DomainModels\obj\Debug\net8.0\ref\DomainModels.dll

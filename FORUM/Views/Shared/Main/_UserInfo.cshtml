@@ -1,0 +1,24 @@
+﻿@using FORUM.ViewClass
+@model MainViewModel
+<div class="ui container" style="display: flex; justify-content: center; margin-top: 50px;">
+    <div class="ui raised segment" style="max-width: 400px; width: 100%; text-align: center; padding: 30px;">
+        <!-- Имя пользователя крупным -->
+        <h1 class="ui header" style="font-size: 2.2em;">
+            <i class="user circle icon"></i>
+            @Model.User.Name
+        </h1>
+
+        <!-- ID пользователя -->
+        <div class="meta" style="font-size: 1.1em; color: gray; margin-bottom: 20px;">
+            ID: @Model.User.Id
+        </div>
+
+        <!-- Блок "О себе" -->
+        <div class="ui segment" style="text-align: left;">
+            <h4 class="ui dividing header">О себе</h4>
+            <p>
+                    @Model.User.About             
+            </p>
+        </div>
+    </div>
+</div>
