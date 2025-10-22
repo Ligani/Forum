@@ -14,5 +14,6 @@ namespace Logics.Interfaces
         public Task<Guid> UserLogin(string name, string password);
         Task<List<User_>> GetAllUsers();
         Task<User_?> GetUserById(Guid Id);
+        Task<Guid> UserUpdate(Guid id, string newName, string newAbout);
     }
 }

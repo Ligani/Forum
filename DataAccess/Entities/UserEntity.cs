@@ -13,6 +13,6 @@ namespace DataAccess.Entities
         public string Name { get; set; }
         public Role RoleOfUser { get; set; }
         public string HashPassword { get; set; }
-        public string About {  get; set; }
+        public string? About {  get; set; }
     }
 }

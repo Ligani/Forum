@@ -34,6 +34,7 @@ namespace DataAccess.Repositories
                 Name = user.Name,
                 HashPassword = user.HashPassword,
                 RoleOfUser = user.RoleOfUser,
+                About = user.About,
             };
 
             await _context.Users.AddAsync(userEntity);
@@ -44,13 +45,15 @@ namespace DataAccess.Repositories
         public async Task<Guid> Delete(Guid id)
         {
             await _context.Users.Where(u => u.Id == id).ExecuteDeleteAsync();
+
             return id;
         }
-        public async Task<Guid> Update(Guid id, string name)
+        public async Task<Guid> Update(Guid id, string name,string about)
         {
             await _context.Users.Where(u => u.Id == id)
-                .ExecuteUpdateAsync(u => u.SetProperty(u => u.Name, u => name));
-
+                .ExecuteUpdateAsync(u => u.SetProperty(u => u.Name, u => name)
+                .SetProperty(u => u.About, u => about));
+            
             return id;
         }
     }

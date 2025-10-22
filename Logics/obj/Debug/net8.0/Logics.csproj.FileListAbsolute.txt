@@ -15,3 +15,4 @@ C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\Logics.
 C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\refint\Logics.dll
 C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\Logics.pdb
 C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\ref\Logics.dll
+C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\Logics\obj\Debug\net8.0\Logics.sourcelink.json

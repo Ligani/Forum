@@ -3,7 +3,10 @@ using FORUM.Contracts;
 using FORUM.ViewClass;
 using Logics.Interfaces;
 using Logics.Services;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 using System.Security.Claims;
@@ -62,7 +65,32 @@ namespace FORUM.Controllers
 
             return View("Account", model); 
         }
-           
+
+        [HttpGet("update/{id:guid}")]
+        public async Task<IActionResult> UpdateUserProfile(Guid id)
+        {
+            var userDomain = await _userService.GetUserById(id);
+            if (userDomain == null)
+                return NotFound();
+
+            var user = new UserResponse(userDomain.Id, userDomain.Name, userDomain.About);
+
+            var postsDomain = await _postService.GetPosts();
+            var userPostsResponse = postsDomain.Where(p => p.User_Id == user.Id)
+                                             .Select(p => new PostResponse(p.Id, p.Title, p.Content, p.FilePath, p.Created));
+            var model = new MainViewModel
+            {
+                User = user,
+                Posts = userPostsResponse
+            };
+            return View("UpdateUserView", model);
+        }
+        public async Task<IActionResult> UpdateUserForm(Guid id,string newName, string newAbout)
+        {
+            await _userService.UserUpdate(id, newName, newAbout);
+          
+            return RedirectToAction("Index");
+        }
 
         [HttpPost]
         public async Task<IActionResult> NewPost(string title, string content, IFormFile file)

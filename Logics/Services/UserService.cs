@@ -49,6 +49,11 @@ namespace Logics.Services
             var validUser = _passwordHasher.HashPassword(newuser.HashPassword, newuser);
             return await _userrep.Create(validUser);
         }
+        public async Task<Guid> UserUpdate(Guid id, string newName,string newAbout)
+        {
+            await _userrep.Update(id, newName, newAbout);
+            return id;
+        }
 
 
         public async Task<Guid> UserLogin(string name, string password)

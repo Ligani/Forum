@@ -47,6 +47,7 @@ namespace DataAccess.Repositories
         public async Task<Guid> Delete(Guid id)
         {
             await _context.Posts.Where(p => p.Id==id).ExecuteDeleteAsync();
+            await _context.SaveChangesAsync();
             return id;
         }
 
@@ -56,6 +57,8 @@ namespace DataAccess.Repositories
                 .ExecuteUpdateAsync(x => x.SetProperty(p => p.Title, p => title)
                 .SetProperty(p => p.Content, p => content)
                 .SetProperty(p => p.FilePath, p => filePath));
+
+            await _context.SaveChangesAsync();
             return id;
         }
     }

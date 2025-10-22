@@ -28,7 +28,7 @@ namespace DomainModels.Models
         public string Name { get; }
         public Role RoleOfUser { get; }
         public string HashPassword { get; set; }
-        public string About {  get; set; }
+        public string About {  get; set; } = "Пусто";
 
         public static (User_ user, string error) CreateUser(Guid id, string name, Role role, string password)
         {
