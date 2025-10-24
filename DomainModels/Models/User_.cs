@@ -15,7 +15,7 @@ namespace DomainModels.Models
 
         public const int MAX_PASSWORD_LENGTH = 16;
         public const int MIN_PASSWORD_LENGTH = 7;
-        private User_(Guid id, string name, Role roleOfUser, string hashPassword, string about)
+        private User_(Guid id, string name, Role roleOfUser, string hashPassword, string? about)
         {
             Id = id;
             Name = name;
@@ -28,9 +28,9 @@ namespace DomainModels.Models
         public string Name { get; }
         public Role RoleOfUser { get; }
         public string HashPassword { get; set; }
-        public string About {  get; set; } = "Пусто";
+        public string? About {  get; set; }
 
-        public static (User_ user, string error) CreateUser(Guid id, string name, Role role, string password)
+        public static (User_ user, string error) CreateUser(Guid id, string name, Role role, string password, string? about)
         {
             var error = string.Empty;
 
@@ -42,9 +42,11 @@ namespace DomainModels.Models
             {
                 error += "Password can not be empty and less than 7 symbols or longer than 16 symbols\n";
             }
-            string about = "Пусто";
-
-            var user = new User_(id, name, role, password,about);
+            if (string.IsNullOrEmpty(about))
+            {
+                about = "Пусто";
+            }
+            var user = new User_(id, name, role, password, about);
 
             return (user, error);
         }

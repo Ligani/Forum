@@ -16,8 +16,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options => {
         options.LoginPath = "/Login/Index";
-
-        options.LogoutPath = "/Login/Index";
         }
 );
 
@@ -47,4 +45,4 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Main}/{action=Index}");
 
-app.Run();
+    app.Run();

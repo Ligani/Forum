@@ -1,7 +1,38 @@
 ﻿@using FORUM.Contracts
 @model IEnumerable<UserResponse>
 
-@foreach (var user in Model)
-{
-    <div>@user.Id - @user.Name</div>
-}
+<div class="ui cards" style="max-width: 900px; margin: 20px auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+    @foreach (var user in Model)
+    {
+        <div class="ui raised card" style="width: 220px; border-radius: 12px;">
+            <div class="content" style="text-align: center;">
+                <div class="header" style="font-size: 1.2em; margin-bottom: 8px;">
+                    <i class="user circle icon"></i> @user.Name
+                </div>
+
+                <div class="meta" style="color: gray; font-size: 0.9em;">
+                    ID: @user.Id
+                </div>
+
+               
+                    <div class="image" style="margin-top: 10px;">
+                        <img src="/images/default-avatar.png" alt="Аватар" class="ui small circular image centered" />
+                    </div>
+             
+
+                <div class="description" style="margin-top: 10px;">
+                    <p style="font-size: 0.9em;">@user.About</p>
+                </div>
+            </div>
+
+            <div class="extra content" style="text-align: center;">
+                <button class="ui teal mini button">
+                    <i class="user plus icon"></i> Добавить
+                </button>
+                <button class="ui basic mini button">
+                    <i class="envelope icon"></i> Сообщение
+                </button>
+            </div>
+        </div>
+    }
+</div>

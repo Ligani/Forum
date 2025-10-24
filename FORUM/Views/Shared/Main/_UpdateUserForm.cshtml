@@ -1,0 +1,32 @@
+﻿<div class="ui container" style="max-width: 600px; margin-top: 40px;">
+    <h2 class="ui teal header">
+        <i class="user edit icon"></i>
+        <div class="content">Обновить профиль</div>
+    </h2>
+
+    <form asp-controller="Main" asp-action="UpdateUserForm" method="post" class="ui form segment">
+        <input type="hidden" name="id" value="@Model.User.Id" />
+        <div class="field">
+            <label>Имя</label>
+            <input type="text" name="newName" value="@Model.User.Name" placeholder="Введите новое имя" required />
+        </div>
+
+        <div class="field">
+            <label>О себе</label>
+            <textarea name="newAbout" placeholder="Расскажите о себе..." rows="4">@Model.User.About</textarea>
+        </div>
+
+        <button type="submit" class="ui teal fluid button">
+            <i class="save icon"></i> Обновить профиль
+        </button>
+
+        @if (!string.IsNullOrEmpty(ViewBag.UpdateError as string))
+        {
+            <div class="ui negative message" style="margin-top: 15px;">
+                <i class="exclamation triangle icon"></i>
+                @ViewBag.UpdateError
+            </div>
+        }
+    </form>
+</div>
+    

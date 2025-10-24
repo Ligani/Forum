@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Main/AllUsersView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxBbGxVc2Vyc1ZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Main/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Main/_DeletePost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1haW5cX0RlbGV0ZVBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Main/_UpdateUserForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1haW5cX1VwZGF0ZVVzZXJGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Main/_UserInfo.cshtml]

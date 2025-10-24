@@ -22,7 +22,7 @@ namespace DataAccess.Repositories
         public async Task<List<User_>> GetAll()
         {
             var usersEntiity = await _context.Users.AsNoTracking().ToListAsync();
-            var usersDomain = usersEntiity.Select(u => User_.CreateUser(u.Id,u.Name,u.RoleOfUser,u.HashPassword).user).ToList();
+            var usersDomain = usersEntiity.Select(u => User_.CreateUser(u.Id,u.Name,u.RoleOfUser,u.HashPassword, u.About).user).ToList();
             return usersDomain;
         }
 

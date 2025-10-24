@@ -13,13 +13,12 @@
 <body>
     <header class="ui borderless menu" style="background-color: #00b5ad; color: white; padding: 10px 0;">
         <div class="ui container">
-            <!-- Логотип / Название -->
+
             <a href="/" class="header item" style="color: white; font-size: 1.3em;">
                 <i class="comments icon"></i>
                 <strong>Forum</strong>
             </a>
 
-            <!-- Основное меню -->
             <nav class="ui secondary menu" style="background: transparent; margin-left: 20px;">
                 @if (User.Identity.IsAuthenticated)
                 {
@@ -29,6 +28,11 @@
                        class="item"
                        style="padding: 0; margin: 0; margin-left: 15px; background: transparent; border: none; color: white; font-size: 1em; cursor: pointer;">
                         <i class="home icon"></i> Главная
+                    </a>
+                    <a asp-controller="Main" asp-action="ViewAllUsers"
+                        class="item"
+                        style="padding: 0; margin: 0; margin-left: 15px; background: transparent; border: none; color: white; font-size: 1em; cursor: pointer;">
+                        <i class="home icon"></i> Пользователи
                     </a>
                 }
                 else

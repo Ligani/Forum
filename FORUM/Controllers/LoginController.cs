@@ -23,7 +23,7 @@ namespace FORUM.Controllers
         [HttpPost]
         public async Task<IActionResult> RegisterUser(UserRequest userReq)
         {
-            var (validUser, error) = User_.CreateUser(Guid.NewGuid(), userReq.name, Role.User, userReq.password);
+            var (validUser, error) = User_.CreateUser(Guid.NewGuid(), userReq.name, Role.User, userReq.password, "Пусто");
             if (!String.IsNullOrEmpty(error))
             {
                 ViewBag.ErrorMessage = error;

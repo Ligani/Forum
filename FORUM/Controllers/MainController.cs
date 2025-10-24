@@ -126,5 +126,11 @@ namespace FORUM.Controllers
             await _postService.DeletePost(id_post);
             return RedirectToAction("profile", new { id = id_user });   
         }
+        public  async Task<IActionResult> ViewAllUsers()
+        {
+            var usersDomain = await _userService.GetAllUsers();
+            var usersResponse = usersDomain.Select(u => new UserResponse(u.Id, u.Name, u.About));
+            return View("AllUsersView", usersResponse);
+        }
     }
 }
