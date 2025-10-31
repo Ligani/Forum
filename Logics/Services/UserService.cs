@@ -15,51 +15,48 @@ namespace Logics.Services
 {
     public class UserService : IUserService
     {
-        private readonly UserRepository _userrep;
+        private readonly UserRepository _userRep;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IPasswordHasherService _passwordHasher;
         public UserService(UserRepository userrep,
             IHttpContextAccessor httpContextAccessor,
             IPasswordHasherService passwordHasher) 
         {
-            _userrep = userrep;
+            _userRep = userrep;
             _httpContextAccessor = httpContextAccessor;
             _passwordHasher = passwordHasher;
 
         }
-        public async Task<List<User_>> GetAllUsers()
+        public async Task<List<User>> GetUsers()
         {
-            return await _userrep.GetAll();
+            return await _userRep.GetAll();
         }
-        public async Task<User_?> GetUserById(Guid Id)
+        public async Task<User?> GetUser(Guid id)
         {
-            var users = await _userrep.GetAll();
-            var user = users.FirstOrDefault(u => u.Id==Id);
+            var user = await _userRep.Get(id);
 
             return user;
         }
-        public async Task<Guid> UserReg(User_ newuser)
+        public async Task<Guid> RegisterUser(User newUser)
         {
-            var users = await _userrep.GetAll();
-            var chekNameUser = users.FirstOrDefault(u => u.Name == newuser.Name);
-            if (chekNameUser != null)
+            var checkName = _userRep.Get(newUser.Name);
+            if (checkName != null)
             {
                 return Guid.Empty;
             }
-            var validUser = _passwordHasher.HashPassword(newuser.HashPassword, newuser);
-            return await _userrep.Create(validUser);
+            var validUser = _passwordHasher.HashPassword(newUser.HashPassword, newUser);
+            return await _userRep.Create(validUser);
         }
-        public async Task<Guid> UserUpdate(Guid id, string newName,string newAbout)
+        public async Task<Guid> UpdateUser(Guid id, string newName,string newAbout)
         {
-            await _userrep.Update(id, newName, newAbout);
+            await _userRep.Update(id, newName, newAbout);
             return id;
         }
 
 
-        public async Task<Guid> UserLogin(string name, string password)
+        public async Task<Guid> LoginUser(string name, string password)
         {
-            var users = await _userrep.GetAll();
-            var user = users.FirstOrDefault(u => u.Name == name);
+            var user =  _userRep;
             if (user == null )
             {
                 return Guid.Empty;

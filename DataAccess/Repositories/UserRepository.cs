@@ -19,14 +19,14 @@ namespace DataAccess.Repositories
             _context = context;
         }
 
-        public async Task<List<User_>> GetAll()
+        public async Task<List<User>> GetAll()
         {
             var usersEntiity = await _context.Users.AsNoTracking().ToListAsync();
-            var usersDomain = usersEntiity.Select(u => User_.CreateUser(u.Id,u.Name,u.RoleOfUser,u.HashPassword, u.About).user).ToList();
+            var usersDomain = usersEntiity.Select(u => User.CreateUser(u.Id,u.Name,u.RoleOfUser,u.HashPassword, u.About).user).ToList();
             return usersDomain;
         }
 
-        public async Task<Guid> Create(User_ user)
+        public async Task<Guid> Create(User user)
         {
             var userEntity = new UserEntity()
             {
@@ -55,6 +55,23 @@ namespace DataAccess.Repositories
                 .SetProperty(u => u.About, u => about));
             
             return id;
+        }
+        public async Task<User> Get(Guid id)
+        {
+            var userEntity = await _context.Users.FindAsync(id);
+            var userDomain = User.CreateUser(userEntity.Id,userEntity.Name,userEntity.RoleOfUser,userEntity.HashPassword,userEntity.About).user;
+            return userDomain;
+        }
+        public async Task<User> Get(string name)
+        {
+            var userEntity = await _context.Users
+                .AsNoTracking()
+                .FirstOrDefaultAsync(u => u.Name == name);
+
+            if (userEntity == null)
+                return null;
+
+            return User.CreateUser(userEntity.Id, userEntity.Name, userEntity.RoleOfUser, userEntity.HashPassword, userEntity.About).user;
         }
     }
 }

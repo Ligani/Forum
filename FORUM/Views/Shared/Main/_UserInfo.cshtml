@@ -2,7 +2,7 @@
 @model MainViewModel
 <div class="ui container" style="display: flex; justify-content: center; margin-top: 50px;">
     <div class="ui raised segment" style="max-width: 400px; width: 100%; text-align: center; padding: 30px;">
-        <a asp-controller="Main" asp-action="UpdateUserProfile" asp-route-id="@Model.User.Id"
+        <a asp-controller="Account" asp-action="UpdateProfile" asp-route-id="@Model.User.Id"
            class="ui teal button"
            style="margin-bottom: 20px;">
             <i class="user edit icon"></i> Обновить профиль

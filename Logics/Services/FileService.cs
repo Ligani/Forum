@@ -42,6 +42,32 @@ namespace Logics.Services
 
             return $"/img/{fileName}";
         }
+
+        public async Task<bool> Delete(string fileUrl)
+        {
+            if (string.IsNullOrEmpty(fileUrl))
+                return false;
+
+            try
+            {
+                var fileName = Path.GetFileName(fileUrl);
+                var rootPath = Directory.GetCurrentDirectory();
+                var filePath = Path.Combine(rootPath, "wwwroot", "img", fileName);
+
+                if (File.Exists(filePath))
+                {
+                    await Task.Run(() => File.Delete(filePath));
+                    return true;
+                }
+
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }
 

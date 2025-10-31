@@ -11,16 +11,16 @@ namespace Logics.Services
 {
     public class PasswordHasherService : IPasswordHasherService
     {
-        public User_ HashPassword(string password, User_ user)
+        public User HashPassword(string password, User user)
         {
-            var hasher = new PasswordHasher<User_>();
+            var hasher = new PasswordHasher<User>();
             user.HashPassword = hasher.HashPassword(user, password);
             return user;
         }
 
-        public bool CheckHashPassword(User_ user, string password)
+        public bool CheckHashPassword(User user, string password)
         {
-            var hasher = new PasswordHasher<User_>();
+            var hasher = new PasswordHasher<User>();
             var result = hasher.VerifyHashedPassword(user, user.HashPassword, password);
             if (result != PasswordVerificationResult.Success)
             {

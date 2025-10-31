@@ -61,5 +61,12 @@ namespace DataAccess.Repositories
             await _context.SaveChangesAsync();
             return id;
         }
+
+        public async Task<Post> Get(Guid id)
+        {
+            var postEntity = await _context.Posts.FindAsync(id);
+            var postDomain = Post.CreatePost(postEntity.Id,postEntity.User_Id,postEntity.Title,postEntity.Content, postEntity.Created, postEntity.FilePath).post;
+            return postDomain;
+        }
     }
 }

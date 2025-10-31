@@ -9,6 +9,7 @@ namespace Logics.Interfaces
 {
     public interface IFileService
     {
+        Task<bool> Delete(string fileUrl);
         public Task<string> Upload(IFormFile file);
     }
 }

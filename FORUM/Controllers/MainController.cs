@@ -30,7 +30,7 @@ namespace FORUM.Controllers
         public async Task<IActionResult> Index()
         {
             var currentUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-            var userDomain = await _userService.GetUserById(currentUserId);
+            var userDomain = await _userService.GetUser(currentUserId);
             var user = new UserResponse(userDomain.Id, userDomain.Name ,userDomain.About);
 
             var postsDomain = await _postService.GetPosts();
@@ -44,91 +44,10 @@ namespace FORUM.Controllers
 
             return View(model);
         }
-
-        [HttpGet("profile/{id:guid}")]
-        public async Task<IActionResult> Profile(Guid id)
+       
+        public  async Task<IActionResult> ShowUsers()
         {
-            var userDomain = await _userService.GetUserById(id);
-            if (userDomain == null)
-                return NotFound();
-
-            var user = new UserResponse(userDomain.Id, userDomain.Name, userDomain.About);
-
-            var postsDomain = await _postService.GetPosts();
-            var userPostsResponse = postsDomain.Where(p => p.User_Id == user.Id)
-                                             .Select(p =>new PostResponse(p.Id,p.Title, p.Content, p.FilePath, p.Created));
-            var model = new MainViewModel
-            {
-                User = user,
-                Posts = userPostsResponse
-            };
-
-            return View("Account", model); 
-        }
-
-        [HttpGet("update/{id:guid}")]
-        public async Task<IActionResult> UpdateUserProfile(Guid id)
-        {
-            var userDomain = await _userService.GetUserById(id);
-            if (userDomain == null)
-                return NotFound();
-
-            var user = new UserResponse(userDomain.Id, userDomain.Name, userDomain.About);
-
-            var postsDomain = await _postService.GetPosts();
-            var userPostsResponse = postsDomain.Where(p => p.User_Id == user.Id)
-                                             .Select(p => new PostResponse(p.Id, p.Title, p.Content, p.FilePath, p.Created));
-            var model = new MainViewModel
-            {
-                User = user,
-                Posts = userPostsResponse
-            };
-            return View("UpdateUserView", model);
-        }
-        public async Task<IActionResult> UpdateUserForm(Guid id,string newName, string newAbout)
-        {
-            await _userService.UserUpdate(id, newName, newAbout);
-          
-            return RedirectToAction("Index");
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> NewPost(string title, string content, IFormFile file)
-        {
-            var filepath = await _fileService.Upload(file);
-            var (post, error) = Post.CreatePost(Guid.NewGuid(), Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!), title, content, DateTime.Now, filepath);
-            if (!String.IsNullOrEmpty(error))
-            {
-                ViewBag.PostError = error;
-
-                var postsDomain = await _postService.GetPosts();
-                var postsResponse = postsDomain.Select(p => new PostResponse(p.Id, p.Title, p.Content, p.FilePath, p.Created));
-                var currentUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-                var userDomain = await _userService.GetUserById(currentUserId);
-                if (userDomain == null)
-                    return NotFound();
-               
-
-                var user = new UserResponse(userDomain.Id, userDomain.Name, userDomain.About);
-                var model = new MainViewModel
-                {
-                    User = user,
-                    Posts = postsResponse
-                };
-                return View("Index", model);
-            }
-            await _postService.CreatePost(post);
-            return RedirectToAction("Index");
-        }
-        [HttpPost]
-        public async Task<IActionResult> DeletePost(Guid id_post, Guid id_user)
-        {
-            await _postService.DeletePost(id_post);
-            return RedirectToAction("profile", new { id = id_user });   
-        }
-        public  async Task<IActionResult> ViewAllUsers()
-        {
-            var usersDomain = await _userService.GetAllUsers();
+            var usersDomain = await _userService.GetUsers();
             var usersResponse = usersDomain.Select(u => new UserResponse(u.Id, u.Name, u.About));
             return View("AllUsersView", usersResponse);
         }

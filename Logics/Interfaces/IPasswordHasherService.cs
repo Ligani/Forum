@@ -4,7 +4,7 @@ namespace Logics.Interfaces
 {
     public interface IPasswordHasherService
     {
-        bool CheckHashPassword(User_ user, string password);
-        User_ HashPassword(string password, User_ user);
+        bool CheckHashPassword(User user, string password);
+        User HashPassword(string password, User user);
     }
 }

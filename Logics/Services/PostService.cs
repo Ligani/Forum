@@ -21,6 +21,10 @@ namespace Logics.Services
         {
             return await _postRep.GetAll();
         }
+        public async Task<Post> GetPost(Guid id)
+        {
+            return await _postRep.Get(id);
+        }
         public async Task<Guid> CreatePost(Post post)
         {
             await _postRep.Create(post);
