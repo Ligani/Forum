@@ -39,7 +39,7 @@ namespace Logics.Services
         }
         public async Task<Guid> RegisterUser(User newUser)
         {
-            var checkName = _userRep.Get(newUser.Name);
+            var checkName = await _userRep.Get(newUser.Name);
             if (checkName != null)
             {
                 return Guid.Empty;
@@ -56,7 +56,7 @@ namespace Logics.Services
 
         public async Task<Guid> LoginUser(string name, string password)
         {
-            var user =  _userRep;
+            var user =  await _userRep.Get(name);
             if (user == null )
             {
                 return Guid.Empty;
