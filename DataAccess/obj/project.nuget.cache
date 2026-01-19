@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XNkaSm9CBqk=",
+  "dgSpecHash": "yN673BfwBo8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\cccccccccccccccc\\Desktop\\web-anki\\FORUM\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\cccccccccccccccc\\Desktop\\Projects\\Forum\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cccccccccccccccc\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\cccccccccccccccc\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.3.0\\microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",

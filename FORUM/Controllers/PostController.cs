@@ -23,16 +23,16 @@ namespace FORUM.Controllers
         [HttpPost]
         public async Task<IActionResult> CreatePost(string title, string content, IFormFile file)
         {
-            var filepath = await _fileService.Upload(file);
+            var filepath = await _fileService.UploadAsync(file);
             var (post, error) = Post.CreatePost(Guid.NewGuid(), Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!), title, content, DateTime.Now, filepath);
             if (!String.IsNullOrEmpty(error))
             {
                 ViewBag.PostError = error;
 
-                var postsDomain = await _postService.GetPosts();
+                var postsDomain = await _postService.GetPostsAsync();
                 var postsResponse = postsDomain.Select(p => new PostResponse(p.Id, p.Title, p.Content, p.FilePath, p.Created));
                 var currentUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-                var userDomain = await _userService.GetUser(currentUserId);
+                var userDomain = await _userService.GetUserAsync(currentUserId);
                 if (userDomain == null)
                     return NotFound();
 
@@ -45,15 +45,15 @@ namespace FORUM.Controllers
                 };
                 return RedirectToAction("Index","Main", model);
             }
-            await _postService.CreatePost(post);
+            await _postService.CreatePostAsync(post);
             return RedirectToAction("Index", "Main");
         }
         [HttpPost]
         public async Task<IActionResult> DeletePost(Guid id_post, Guid id_user)
         {
-            var post = await _postService.GetPost(id_post);
-            await _postService.DeletePost(id_post);
-            await _fileService.Delete(post.FilePath);
+            var post = await _postService.GetPostAsync(id_post);
+            await _postService.DeletePostAsync(id_post);
+            await _fileService.DeleteAsync(post.FilePath);
             return RedirectToAction("profile", "Account", new { id = id_user });
         }
     }

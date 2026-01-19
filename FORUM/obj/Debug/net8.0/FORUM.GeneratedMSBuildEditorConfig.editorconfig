@@ -17,93 +17,93 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FORUM
 build_property.RootNamespace = FORUM
-build_property.ProjectDir = C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\FORUM\
+build_property.ProjectDir = C:\Users\cccccccccccccccc\Desktop\Projects\Forum\FORUM\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\cccccccccccccccc\Desktop\web-anki\FORUM\FORUM
+build_property.MSBuildProjectDirectory = C:\Users\cccccccccccccccc\Desktop\Projects\Forum\FORUM
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Account/Account.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Account/Account.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Account/Index.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Account/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Account/Register.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Account/UpdateUser.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Account/UpdateUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVcGRhdGVVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Main/AllUsersView.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Main/AllUsersView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxBbGxVc2Vyc1ZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Main/Index.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Main/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Login/_LoginForm.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Shared/Login/_LoginForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luXF9Mb2dpbkZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Login/_LogoutForm.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Shared/Login/_LogoutForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luXF9Mb2dvdXRGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Login/_RegisterForm.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Shared/Login/_RegisterForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luXF9SZWdpc3RlckZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Main/_CreatePostForm.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Shared/Main/_CreatePostForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1haW5cX0NyZWF0ZVBvc3RGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Main/_DeletePost.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Shared/Main/_DeletePost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1haW5cX0RlbGV0ZVBvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Main/_UpdateUserForm.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Shared/Main/_UpdateUserForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1haW5cX1VwZGF0ZVVzZXJGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Main/_UserInfo.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Shared/Main/_UserInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1haW5cX1VzZXJJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Main/_UserPosts.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Shared/Main/_UserPosts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1haW5cX1VzZXJQb3N0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Main/_ViewAllPosts.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Shared/Main/_ViewAllPosts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1haW5cX1ZpZXdBbGxQb3N0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Main/_ViewAllUsers.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Shared/Main/_ViewAllUsers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1haW5cX1ZpZXdBbGxVc2Vycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/Profile/_GoToProfile.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Shared/Profile/_GoToProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFByb2ZpbGVcX0dvVG9Qcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/Shared/_Layout.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/_ViewImports.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cccccccccccccccc/Desktop/web-anki/FORUM/FORUM/Views/_ViewStart.cshtml]
+[C:/Users/cccccccccccccccc/Desktop/Projects/Forum/FORUM/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -30,10 +30,10 @@ namespace FORUM.Controllers
         public async Task<IActionResult> Index()
         {
             var currentUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-            var userDomain = await _userService.GetUser(currentUserId);
+            var userDomain = await _userService.GetUserAsync(currentUserId);
             var user = new UserResponse(userDomain.Id, userDomain.Name ,userDomain.About);
 
-            var postsDomain = await _postService.GetPosts();
+            var postsDomain = await _postService.GetPostsAsync();
             var postsResponse = postsDomain.Select(p => new PostResponse(p.Id,p.Title, p.Content, p.FilePath, p.Created));
 
             var model = new MainViewModel
@@ -47,7 +47,7 @@ namespace FORUM.Controllers
        
         public  async Task<IActionResult> ShowUsers()
         {
-            var usersDomain = await _userService.GetUsers();
+            var usersDomain = await _userService.GetUsersAsync();
             var usersResponse = usersDomain.Select(u => new UserResponse(u.Id, u.Name, u.About));
             return View("AllUsersView", usersResponse);
         }

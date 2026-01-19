@@ -27,36 +27,36 @@ namespace Logics.Services
             _passwordHasher = passwordHasher;
 
         }
-        public async Task<List<User>> GetUsers()
+        public async Task<List<User>> GetUsersAsync()
         {
-            return await _userRep.GetAll();
+            return await _userRep.GetAllAsync();
         }
-        public async Task<User?> GetUser(Guid id)
+        public async Task<User?> GetUserAsync(Guid id)
         {
-            var user = await _userRep.Get(id);
+            var user = await _userRep.GetAsync(id);
 
             return user;
         }
-        public async Task<Guid> RegisterUser(User newUser)
+        public async Task<Guid> RegisterUserAsync(User newUser)
         {
-            var checkName = await _userRep.Get(newUser.Name);
+            var checkName = await _userRep.GetAsync(newUser.Name);
             if (checkName != null)
             {
                 return Guid.Empty;
             }
             var validUser = _passwordHasher.HashPassword(newUser.HashPassword, newUser);
-            return await _userRep.Create(validUser);
+            return await _userRep.CreateAsync(validUser);
         }
-        public async Task<Guid> UpdateUser(Guid id, string newName,string newAbout)
+        public async Task<Guid> UpdateUserAsync(Guid id, string newName,string newAbout)
         {
-            await _userRep.Update(id, newName, newAbout);
+            await _userRep.UpdateAsync(id, newName, newAbout);
             return id;
         }
 
 
-        public async Task<Guid> LoginUser(string name, string password)
+        public async Task<Guid> LoginUserAsync(string name, string password)
         {
-            var user =  await _userRep.Get(name);
+            var user =  await _userRep.GetAsync(name);
             if (user == null )
             {
                 return Guid.Empty;

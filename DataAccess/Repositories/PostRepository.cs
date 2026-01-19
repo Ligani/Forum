@@ -20,7 +20,7 @@ namespace DataAccess.Repositories
             _context = context;
         }
 
-        public async Task<Guid> Create(Post post)
+        public async Task<Guid> CreateAsync(Post post)
         {
             var postEntity = new PostEntity()
             {
@@ -37,21 +37,21 @@ namespace DataAccess.Repositories
             return postEntity.Id;
         }
 
-        public async Task<List<Post>> GetAll()
+        public async Task<List<Post>> GetAllAsync()
         {
             var postsEntity = await _context.Posts.AsNoTracking().ToListAsync();
             var postsDomain = postsEntity.Select(p => Post.CreatePost(p.Id, p.User_Id, p.Title, p.Content, p.Created, p.FilePath).post).ToList();
             return postsDomain;
         }
 
-        public async Task<Guid> Delete(Guid id)
+        public async Task<Guid> DeleteAsync(Guid id)
         {
             await _context.Posts.Where(p => p.Id==id).ExecuteDeleteAsync();
             await _context.SaveChangesAsync();
             return id;
         }
 
-        public async Task<Guid> Update(Guid id, string title, string content, string filePath)
+        public async Task<Guid> UpdateAsync(Guid id, string title, string content, string filePath)
         {
             await _context.Posts.Where(p => p.Id == id)
                 .ExecuteUpdateAsync(x => x.SetProperty(p => p.Title, p => title)
@@ -62,7 +62,7 @@ namespace DataAccess.Repositories
             return id;
         }
 
-        public async Task<Post> Get(Guid id)
+        public async Task<Post> GetAsync(Guid id)
         {
             var postEntity = await _context.Posts.FindAsync(id);
             var postDomain = Post.CreatePost(postEntity.Id,postEntity.User_Id,postEntity.Title,postEntity.Content, postEntity.Created, postEntity.FilePath).post;

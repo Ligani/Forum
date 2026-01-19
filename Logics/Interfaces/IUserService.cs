@@ -10,10 +10,10 @@ namespace Logics.Interfaces
 {
     public interface IUserService
     {
-        public Task<Guid> RegisterUser(User newuser);
-        public Task<Guid> LoginUser(string name, string password);
-        Task<List<User>> GetUsers();
-        Task<User?> GetUser(Guid Id);
-        Task<Guid> UpdateUser(Guid id, string newName, string newAbout);
+        public Task<Guid> RegisterUserAsync(User newuser);
+        public Task<Guid> LoginUserAsync(string name, string password);
+        Task<List<User>> GetUsersAsync();
+        Task<User?> GetUserAsync(Guid Id);
+        Task<Guid> UpdateUserAsync(Guid id, string newName, string newAbout);
     }
 }

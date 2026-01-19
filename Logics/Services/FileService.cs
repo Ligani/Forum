@@ -12,7 +12,7 @@ namespace Logics.Services
 {
     public class FileService : IFileService
     {
-        public async Task<string> Upload(IFormFile file)
+        public async Task<string> UploadAsync(IFormFile file)
         {
             if (file == null || file.Length == 0)
                 return string.Empty;
@@ -43,7 +43,7 @@ namespace Logics.Services
             return $"/img/{fileName}";
         }
 
-        public async Task<bool> Delete(string fileUrl)
+        public async Task<bool> DeleteAsync(string fileUrl)
         {
             if (string.IsNullOrEmpty(fileUrl))
                 return false;

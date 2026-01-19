@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W9dE8R3D5EM=",
+  "dgSpecHash": "fxP21Ud5c4I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\cccccccccccccccc\\Desktop\\web-anki\\FORUM\\Logics\\Logics.csproj",
+  "projectFilePath": "C:\\Users\\cccccccccccccccc\\Desktop\\Projects\\Forum\\Logics\\Logics.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cccccccccccccccc\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.3.0\\microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",
     "C:\\Users\\cccccccccccccccc\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",

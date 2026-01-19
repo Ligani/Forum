@@ -36,7 +36,7 @@ namespace FORUM.Controllers
                 return View("Register");
             }
 
-            var res = await _userService.RegisterUser(validUser);
+            var res = await _userService.RegisterUserAsync(validUser);
 
             if (res == Guid.Empty)
             {
@@ -55,7 +55,7 @@ namespace FORUM.Controllers
         [HttpPost]
         public async Task<IActionResult> LoginUser(UserRequest userRequest)
         {
-            var id = await _userService.LoginUser(userRequest.name, userRequest.password);
+            var id = await _userService.LoginUserAsync(userRequest.name, userRequest.password);
 
             if (id == Guid.Empty)
             {
@@ -77,13 +77,13 @@ namespace FORUM.Controllers
         [HttpGet("profile/{id:guid}")]
         public async Task<IActionResult> Profile(Guid id)
         {
-            var userDomain = await _userService.GetUser(id);
+            var userDomain = await _userService.GetUserAsync(id);
             if (userDomain == null)
                 return NotFound();
 
             var user = new UserResponse(userDomain.Id, userDomain.Name, userDomain.About);
 
-            var postsDomain = await _postService.GetPosts();
+            var postsDomain = await _postService.GetPostsAsync();
             var userPostsResponse = postsDomain.Where(p => p.User_Id == user.Id)
                                              .Select(p => new PostResponse(p.Id, p.Title, p.Content, p.FilePath, p.Created));
             var model = new MainViewModel
@@ -97,7 +97,7 @@ namespace FORUM.Controllers
         [Authorize]
         public async Task<IActionResult> UpdateUserForm(Guid id, string newName, string newAbout)
         {
-            await _userService.UpdateUser(id, newName, newAbout);
+            await _userService.UpdateUserAsync(id, newName, newAbout);
 
             return RedirectToAction("Index", "Main");
         }
@@ -106,13 +106,13 @@ namespace FORUM.Controllers
         [HttpGet("update/{id:guid}")]
         public async Task<IActionResult> UpdateProfile(Guid id)
         {
-            var userDomain = await _userService.GetUser(id);
+            var userDomain = await _userService.GetUserAsync(id);
             if (userDomain == null)
                 return NotFound();
 
             var user = new UserResponse(userDomain.Id, userDomain.Name, userDomain.About);
 
-            var postsDomain = await _postService.GetPosts();
+            var postsDomain = await _postService.GetPostsAsync();
             var userPostsResponse = postsDomain.Where(p => p.User_Id == user.Id)
                                              .Select(p => new PostResponse(p.Id, p.Title, p.Content, p.FilePath, p.Created));
             var model = new MainViewModel
