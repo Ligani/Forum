@@ -340,7 +340,7 @@ C:\Users\cccccccccccccccc\Desktop\Projects\Forum\FORUM\obj\Debug\net8.0\staticwe
 C:\Users\cccccccccccccccc\Desktop\Projects\Forum\FORUM\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\cccccccccccccccc\Desktop\Projects\Forum\FORUM\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\cccccccccccccccc\Desktop\Projects\Forum\FORUM\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\cccccccccccccccc\Desktop\Projects\Forum\FORUM\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\cccccccccccccccc\Desktop\Projects\Forum\FORUM\obj\Debug\net8.0\FORUM.csproj.Up2Date
 C:\Users\cccccccccccccccc\Desktop\Projects\Forum\FORUM\obj\Debug\net8.0\FORUM.genruntimeconfig.cache
 C:\Users\cccccccccccccccc\Desktop\Projects\Forum\FORUM\obj\Debug\net8.0\ref\FORUM.dll
+C:\Users\cccccccccccccccc\Desktop\Projects\Forum\FORUM\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
